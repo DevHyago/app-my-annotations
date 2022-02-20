@@ -37,20 +37,28 @@ body{
    padding: 10px 20px;
    border-radius: 10px;
    color: #fff;
-   cursor: pointer;
    font-weight: 300;
    transition: all ease 0.3s;
    margin: 5px;
+   border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+.container li div{
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
 }
 
 .container li div:first-child{
    flex: 2;
    font-weight: 500;
+   cursor: pointer;
 }
 
 .container li div:nth-child(2){
    flex: 1;
    font-size: 14px;
+   cursor: default;
 }
 
 .container li:hover{
@@ -114,10 +122,9 @@ button.remove:hover{
    height: 100vh;
    position: fixed;
    background-color: rgba(0, 0, 0, .6);
-   display: flex;
+   display: none;
    justify-content: center;
    align-items: center;
-   display: none;
 }
 
 
@@ -186,6 +193,7 @@ button.remove:hover{
 .box textarea{
    min-width: 100%;
    max-width: 100%;
+   height: auto;
    padding: 10px;
    border-radius: 5px;
    border: none;
